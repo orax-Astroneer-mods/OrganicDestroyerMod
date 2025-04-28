@@ -1,6 +1,8 @@
 ---@type Mod_Options
 return {
-  enabledAtStart = true, -- true | false
+  enabled_organic_destroyer_at_start = true,              -- true | false
+  enabled_researchable_plant_destroyer_at_start = true,   -- true | false
+  enabled_researchable_mineral_destroyer_at_start = true, -- true | false
 
   --[[
     You can change commands name if you want.
@@ -10,8 +12,8 @@ return {
 
   commands = {
     --[[
-        Name: destroy
-        Usage: destroy [on | off | all]
+        Name: destroy_organic
+        Usage: destroy_organic [on | off | all]
           * 1, on, enable
           Enable the mod. New organic resources extracted using Terrain Tool or Drills will be destroyed.
           * 0, off, disable
@@ -24,8 +26,30 @@ return {
           destroy off
           destroy all
         ]]
-    destroy = {
-      name = "destroy",
+    destroy_organic = {
+      name = "destroy_organic",
+      parameters = {
+        on = { "1", "on", "enable" },
+        off = { "0", "off", "disable" },
+        all = { "all" }
+      }
+    },
+    --[[
+        Name: destroy_researchable_plant
+    ]]
+    destroy_researchable_plant = {
+      name = "destroy_researchable_plant",
+      parameters = {
+        on = { "1", "on", "enable" },
+        off = { "0", "off", "disable" },
+        all = { "all" }
+      }
+    },
+    --[[
+        Name: destroy_researchable_mineral
+    ]]
+    destroy_researchable_mineral = {
+      name = "destroy_researchable_mineral",
       parameters = {
         on = { "1", "on", "enable" },
         off = { "0", "off", "disable" },
@@ -33,6 +57,9 @@ return {
       }
     }
   },
+
+  delay_before_deleting_unslotted_item = 5000,
+  delay_before_deleting_new_item = 5000,
 
   -- You probably do not need to change these.
   delay = 1,
