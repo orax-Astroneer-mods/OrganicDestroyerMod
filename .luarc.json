@@ -1,7 +1,12 @@
 {
     "$schema": "https://raw.githubusercontent.com/LuaLS/vscode-lua/master/setting/schema.json",
     "diagnostics.globals": [
-        "ModRef"
+        "ModRef",
+        "TestsMod"
+    ],
+    "diagnostics.libraryFiles": "Disable",
+    "workspace.ignoreDir": [
+        ".vscode"
     ],
     "workspace.library": [
         "../shared"
