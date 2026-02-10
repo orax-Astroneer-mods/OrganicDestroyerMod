@@ -1,0 +1,13 @@
+{
+  "mods": {
+    "OrganicDestroyerMod": {
+      "latest_version": "0.2.2",
+      "versions": {
+        "0.2.2": {
+          "download_url": "https://github.com/orax-Astroneer-mods/OrganicDestroyerMod/releases/download/v0.2.2/000-OrganicDestroyerMod-0.2.2_P.pak",
+          "filename": "000-OrganicDestroyerMod-0.2.2_P.pak"
+        }
+      }
+    }
+  }
+}
